@@ -13,6 +13,10 @@ Get the list of all html elements with these 3 values
 Show the search like Alfred or Quick search 
 put a visual here with expected results for "tex", "selec", "but" etc.
 
+![](https://github.com/cksachdev/fuzzyjs/wiki/images/ex1.png)
+![](https://github.com/cksachdev/fuzzyjs/wiki/images/ex2.png)
+![](https://github.com/cksachdev/fuzzyjs/wiki/images/ex3.png)
+
 
 1. Use mousetrap library to fade in/ fade out the search element
 https://github.com/ccampbell/mousetrap
