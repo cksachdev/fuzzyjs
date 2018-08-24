@@ -15,6 +15,7 @@ put a visual here with expected results for "tex", "selec", "but" etc.
 
 
 1. Use mousetrap library to fade in/ fade out the search element
+https://github.com/ccampbell/mousetrap
 2. element stays always on top(z-index)
 3. 30 px from top and horizontal center aligned
 4. On search show image as well as the element name
