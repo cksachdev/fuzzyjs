@@ -41,6 +41,9 @@ ls | head -100 > ../elements.json
 https://github.com/krisk/fuse
 
 https://github.com/bevacqua/fuzzysearch
+https://blog.kentcdodds.com/introducing-downshift-for-react-b1de3fca0817
+https://twitter.github.io/typeahead.js/
+
 
 
 
