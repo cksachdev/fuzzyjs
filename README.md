@@ -36,6 +36,13 @@ ls | head -100 > ../elements.json
 3. Use multi cursor feature in sublime to form the test json
 
 
+### Libraries:
+
+https://github.com/krisk/fuse
+
+https://github.com/bevacqua/fuzzysearch
+
+
 
 
 
