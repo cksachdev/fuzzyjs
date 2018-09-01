@@ -1,0 +1,35 @@
+.SearchInputWrapperOwerlay {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: none;
+}
+
+.SearchInputWrapper {
+  margin: auto;
+  width: 40%;
+  padding: 10px;
+  background-color: rgba(241, 241, 241, 0.6);
+  border-radius: 8px;
+  box-shadow: 4px 4px 20px 7px rgba(224, 224, 224, 0.65);
+}
+
+.ResultWrapper {
+  
+}
+
+#searchInput {
+  display: block;
+  width: 100%;
+  height: 56px;
+  margin: auto;
+  border: 0px;
+  outline: none;
+  font-size: 1.6rem;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  background-color: rgba(235, 235, 235, 0.65);
+  padding: 20px 20px;
+  border-radius: 3px;
+}
