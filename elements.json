@@ -1,260 +1,208 @@
-[
-{
+[{
     "imagepath": "icons/AlertDanger.png",
     "elementname": "alert",
     "description": "alert danger"
-}
-{
+},{
     "imagepath": "icons/AlertInfo.png",
     "elementname": "alert",
     "description": "alert info"
-}
-{
+},{
     "imagepath": "icons/AlertSuccess.png",
     "elementname": "alert",
     "description": "alert success"
-}
-{
+},{
     "imagepath": "icons/AlertWarning.png",
     "elementname": "alert",
     "description": "alert warning"
-}
-{
+},{
     "imagepath": "icons/Badge.png",
     "elementname": "badge",
     "description": "badge"
-}
-{
+},{
     "imagepath": "icons/Breadcrumbs.png",
     "elementname": "bread crumbs",
     "description": "bread crumbs"
-}
-{
+},{
     "imagepath": "icons/Button.png",
     "elementname": "button",
     "description": "button"
-}
-{
+},{
     "imagepath": "icons/ButtonDanger.png",
     "elementname": "button danger",
     "description": "button danger"
-}
-{
+},{
     "imagepath": "icons/ButtonInfo.png",
     "elementname": "button ",
     "description": "button info"
-}
-{
+},{
     "imagepath": "icons/ButtonPrimary.png",
     "elementname": "button",
     "description": "primary button"
-}
-{
+},{
     "imagepath": "icons/ButtonSuccess.png",
     "elementname": "button",
     "description": "success button"
-}
-{
+},{
     "imagepath": "icons/ButtonWarning.png",
     "elementname": "button",
     "description": "warning button"
-}
-{
+},{
     "imagepath": "icons/Checkbox.png",
     "elementname": "checkbox",
     "description": "checkbox "
-}
-{
+},{
     "imagepath": "icons/Dropdown.png",
     "elementname": "dropdown",
     "description": "dropdown"
-}
-{
+},{
     "imagepath": "icons/Label.png",
     "elementname": "label",
     "description": "can accept text"
-}
-{
+},{
     "imagepath": "icons/LabelDanger.png",
     "elementname": "label",
     "description": "danger label text"
-}
-{
+},{
     "imagepath": "icons/LabelInfo.png",
     "elementname": "label",
     "description": "info label text"
-}
-{
+},{
     "imagepath": "icons/LabelPrimary.png",
     "elementname": "label",
     "description": "primary label text"
-}
-{
+},{
     "imagepath": "icons/LabelSuccess.png",
     "elementname": "label",
     "description": "success label text"
-}
-{
+},{
     "imagepath": "icons/LabelWarning.png",
     "elementname": "label",
     "description": "warning label text"
-}
-{
+},{
     "imagepath": "icons/NavItemSelected.png",
     "elementname": "navigation",
     "description": "nav navigation item"
-}
-{
+},{
     "imagepath": "icons/NavItemSelectedInverse.png",
     "elementname": "nav selected",
     "description": "selected nav"
-}
-{
+},{
     "imagepath": "icons/NavItemUnselected.png",
     "elementname": "nav item",
     "description": "nav selected"
-}
-{
+},{
     "imagepath": "icons/NavItemUnselectedInverse.png",
     "elementname": "nav unselected",
     "description": "unselected nav"
-}
-{
+},{
     "imagepath": "icons/Navbar.png",
     "elementname": "navbar",
     "description": "navbar"
-}
-{
+},{
     "imagepath": "icons/NavbarFull.png",
     "elementname": "navbar full",
     "description": "navbar"
-}
-{
+},{
     "imagepath": "icons/NavbarFullInverse.png",
     "elementname": "navbar inverse",
     "description": "navbar"
-}
-{
+},{
     "imagepath": "icons/NavbarInverse.png",
     "elementname": "navbar",
     "description": "navbar"
-}
-{
+},{
     "imagepath": "icons/PagerNext.png",
     "elementname": "pager",
     "description": "pagination page"
-}
-{
+},{
     "imagepath": "icons/PagerPrevious.png",
     "elementname": "pager",
     "description": "pager"
-}
-{
+},{
     "imagepath": "icons/Panel.png",
     "elementname": "panel",
     "description": "panel"
-}
-{
+},{
     "imagepath": "icons/PanelDanger.png",
     "elementname": "panel",
     "description": "danger panel"
-}
-{
+},{
     "imagepath": "icons/PanelInfo.png",
     "elementname": "panel",
     "description": "info panel"
-}
-{
+},{
     "imagepath": "icons/PanelNoHeading.png",
     "elementname": "panel",
     "description": "no heading panel"
-}
-{
+},{
     "imagepath": "icons/PanelPrimary.png",
     "elementname": "panel",
     "description": "primary panel"
-}
-{
+},{
     "imagepath": "icons/PanelSuccess.png",
     "elementname": "panel",
     "description": "success panel"
-}
-{
+},{
     "imagepath": "icons/PanelWarning.png",
     "elementname": "panel",
     "description": "warning panel"
-}
-{
+},{
     "imagepath": "icons/PillTab.png",
     "elementname": "pill",
     "description": "tab pill"
-}
-{
+},{
     "imagepath": "icons/PillTabUnselected.png",
     "elementname": "pill unselected",
     "description": "unselected pill tab"
-}
-{
+},{
     "imagepath": "icons/ProgressBar.png",
     "elementname": "progressbar",
     "description": "progress bar"
-}
-{
+},{
     "imagepath": "icons/ProgressBarDanger.png",
     "elementname": "progressbar",
     "description": "danger progressbar"
-}
-{
+},{
     "imagepath": "icons/ProgressBarInfo.png",
     "elementname": "progressbar",
     "description": "info progressbar"
-}
-{
+},{
     "imagepath": "icons/ProgressBarSuccess.png",
     "elementname": "progressbar",
     "description": "success progressbar"
-}
-{
+},{
     "imagepath": "icons/ProgressBarWarning.png",
     "elementname": "progressbar",
     "description": "progress bar warning"
-}
-{
+},{
     "imagepath": "icons/Radio.png",
     "elementname": "radio",
     "description": "radio"
-}
-{
+},{
     "imagepath": "icons/Tab.png",
     "elementname": "tab",
     "description": "tab"
-}
-{
+},{
     "imagepath": "icons/TabUnselected.png",
     "elementname": "tab unselected",
     "description": "tab unselected"
-}
-{
+},{
     "imagepath": "icons/Table.png",
     "elementname": "table",
     "description": "table"
-}
-{
+},{
     "imagepath": "icons/TextInput.png",
     "elementname": "textinput",
     "description": "textinput input text"
-}
-{
+},{
     "imagepath": "icons/Well.png",
     "elementname": "well",
     "description": "well"
-}
-{
+},{
     "imagepath": "icons/WellLarge.png",
     "elementname": "well large",
     "description": "well large"
-}
-{
+},{
     "imagepath": "icons/WellSmall.png",
     "elementname": "well small",
     "description": "small well"
