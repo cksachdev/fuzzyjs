@@ -6,6 +6,7 @@
 	
   <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="style/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
 </head>
 <body>
   <div class="SearchInputWrapperOwerlay">
@@ -16,16 +17,38 @@
       <div class="ResultWrapper">
         
       </div>
+      <div id="output"></div>
     </div>
-      
-    </div>
-	</div>
+  </div>
+  
+
+  <script id="tmplList" type="text/x-jsrender">
+    <ul class="typeahead__list">{{for people}}
+        <li class="typeahead__item">
+          <a href="#">
+            <span class="row">
+              <span class="avatar">
+                <img src="{{:item.imagepath}}">
+              </span>
+              <span class="username">
+                 {{:item.elementname}}
+                <small class="desc">{{:item.description}}</small>
+              </span>
+            </span>
+          </a>
+        </li>
+    {{/for}}</ul>
+  </script>
+
 	<!-- <p>Press Ctrl+Space to see the search bar</p>	 -->
 	<script type="text/javascript" src="script/jquery.min.js"></script>
   <script type="text/javascript" src="script/mousetrap.min.js"></script>
   <script type="text/javascript" src="script/popper.min.js"></script>
   <script type="text/javascript" src="script/bootstrap.min.js"></script>
   <script type="text/javascript" src="script/fuse.min.js"></script>
-	<script type="text/javascript" src="script/scripts.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsrender/0.9.90/jsrender.min.js"></script>
+  <script type="text/javascript" src="script/scripts.js"></script>
+
+
 </body>
 </html>

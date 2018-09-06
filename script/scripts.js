@@ -18,17 +18,20 @@ var fuse = undefined;
 // Shortcut Definition to show searchbar
 Mousetrap.bind('ctrl+shift+k', function(e) {
   $(".SearchInputWrapperOwerlay").show()
-})
+  $("#searchInput")
+  .val('')
+  .focus();
+});
 
 // Shortcut Definition to hide searchbar
 Mousetrap.bind('esc', function(e) {
-  $(".SearchInputWrapperOwerlay").hide()
+  $(".SearchInputWrapperOwerlay").hide();
 })
 
 $(document).ready(function($) {
 
   // Hide Search Input at beginning
-  $(".SearchInputWrapperOwerlay").hide()
+  $(".SearchInputWrapperOwerlay").hide();
 
   $.getJSON("elements.json", function(json) {
     // console.log(json)
@@ -36,9 +39,16 @@ $(document).ready(function($) {
     fuse = new Fuse(list, options); // "list" is the item array
   });
   
-  $("#searchInput").change(function(event) {
+  $("#searchInput").keyup(function (event) {
     var searchText = $(event.currentTarget).val()
     var result = fuse.search(searchText);
-    console.log(result)
+    if(result.length == 0) {
+      $("#output").removeClass("show");
+      return false;
+    }
+    var data = {people: result };
+    var tmpl = $.templates("#tmplList");
+    var html = tmpl.render(data);
+    $("#output").empty().html(html).addClass("show");
   });
 });
