@@ -1,6 +1,6 @@
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #403b3b;
+  background-color: yellow;
 }
 .SearchInputWrapperOwerlay {
   position: absolute;
@@ -70,6 +70,9 @@ body {
   border-top: 1px solid #d1d1d1;
 }
 
+.typeahead__list>li.selected {
+background-color: #d1d1d1;
+}
 .typeahead__list .typeahead__item>a {
   display: block;
   padding: .5rem .75rem;
