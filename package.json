@@ -1,0 +1,24 @@
+{
+  "name": "fuzzyjs",
+  "version": "1.0.0",
+  "description": "fuzzy search in one or more column values and sort based on most matched",
+  "main": "index.js",
+  "dependencies": {
+    "redux-undo": "^0.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cksachdev/fuzzyjs.git"
+  },
+  "keywords": [],
+  "author": "Vaibhav",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cksachdev/fuzzyjs/issues"
+  },
+  "homepage": "https://github.com/cksachdev/fuzzyjs#readme"
+}

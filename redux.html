@@ -25,23 +25,6 @@
   
   <div id="spnResult"></div>
 
-  <script id="tmplList" type="text/x-jsrender">
-    <ul class="typeahead__list">{{for people}}
-        <li class="typeahead__item">
-          <a href="#">
-            <span class="row">
-              <span class="avatar">
-                <img src="{{:item.imagepath}}">
-              </span>
-              <span class="username">
-                 {{:item.elementname}}
-                <small class="desc">{{:item.description}}</small>
-              </span>
-            </span>
-          </a>
-        </li>
-    {{/for}}</ul>
-  </script>
 
 	<!-- <p>Press Ctrl+Space to see the search bar</p>	 -->
 	<script type="text/javascript" src="script/jquery.min.js"></script>
@@ -51,7 +34,8 @@
   <script type="text/javascript" src="script/fuse.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/redux/3.5.2/redux.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsrender/0.9.90/jsrender.min.js"></script>
-  <script type="text/javascript" src="script/scripts.js"></script>
+  <script type="text/javascript" src="script/bundle.js"></script>
+  
 
 
 </body>

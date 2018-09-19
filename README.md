@@ -46,6 +46,10 @@ https://blog.kentcdodds.com/introducing-downshift-for-react-b1de3fca0817
 
 https://twitter.github.io/typeahead.js/
 
+https://redux.js.org/recipes/implementingundohistory
+
+https://github.com/omnidan/redux-undo
+
 
 
 
