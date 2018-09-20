@@ -68,6 +68,12 @@ const undoName = () => store.dispatch(undo());
 
 $("#add").click(function(e){
   var val = $("#name").val();
+
+  if(!val && val==''){
+    alert("Please enter name");
+    return false;
+  }
+
   addName(val);
   $("#name").val('');
 });
