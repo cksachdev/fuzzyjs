@@ -1,75 +1,85 @@
-let undoable =  require('redux-undo').default; 
- 
-const todo = (state, action) => {
-  switch (action.type) {
-    case 'ADD_TODO':
-      return {
-        id: action.id,
-        text: action.text,
-        completed: false
-      }
-    case 'TOGGLE_TODO':
-      if (state.id !== action.id) {
-        return state
-      }
+let undoable =  require('redux-undo').default;
+let nextNodeId = 1;
 
-      return {
-        ...state,
-        completed: !state.completed
-      }
+
+const ADD_NAME = 'ADD_NAME';
+
+const UNDO_NAME = 'UNDO_NAME'
+const REDO_NAME = 'REDO_NAME'
+
+function add(text) {
+  return {
+    type: ADD_NAME,text
+  }
+}
+
+function undo() {
+  return {
+    type: UNDO_NAME
+  }
+}
+
+function redo() {
+  return {
+    type: REDO_NAME
+  }
+}
+
+function nameReducer(state = { name: '' }, action) {
+  switch (action.type) {
+    case ADD_NAME:
+      return { ...state, name: action.text}
     default:
       return state
   }
 }
 
-const todos = (state = [], action) => {
-  switch (action.type) {
-    case 'ADD_TODO':
-      return [
-        ...state,
-        todo(undefined, action)
-      ]
-    case 'TOGGLE_TODO':
-      return state.map(t =>
-        todo(t, action)
-      )
-    default:
-      return state
-  }
-}
+const rootReducer = Redux.combineReducers({
+  name: undoable(nameReducer, {
+    limit: 10,
+    debug: true,
+    undoType: UNDO_NAME,
+    redoType: REDO_NAME
+  })
+})
 
-
-
-const undoableTodos = undoable(todos);
-
-
-// const undoableTodos = undoable(todos, { filter: includeAction(['ADD_TODO', 'TOGGLE_TODO']) })
-
-
-const store = Redux.createStore(undoableTodos,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+const store = Redux.createStore(rootReducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 store.subscribe(() => {
-  console.log(JSON.stringify(store.getState()));
-  $('#spnResult').html('<span>The name is: <b>' + JSON.stringify(store.getState()) + '</b></span>');
+  var {canRedo,canUndo} = mapStateToProps(store);
+  document.getElementById("undo").disabled = !canUndo;
+  document.getElementById("redo").disabled = !canRedo;
+  // console.log(JSON.stringify(store.getState()));
+  $("#codeJson").html(JSON.stringify(store.getState(), null, 2));
+  $('#name').val(store.getState().name.present.name.toString());
 });
 
 
-store.dispatch({
-  type: 'ADD_TODO',
-  text: 'Use Redux'
+const mapStateToProps = (store) => {
+  return {
+    canUndo: store.getState().name.past.length > 0,
+    canRedo: store.getState().name.future.length > 0
+  }
+}
+
+const addName = (text) => store.dispatch(add(text));
+const redoName = () => store.dispatch(redo());
+const undoName = () => store.dispatch(undo());
+
+$("#add").click(function(e){
+  var val = $("#name").val();
+  addName(val);
+  $("#name").val('');
 });
 
-store.dispatch({
-  type: 'ADD_TODO',
-  text: 'Implement Undo'
+
+$("#redo").click(function(){
+  redoName();
 });
 
-// store.dispatch({
-//   type: 'UNDO'
-// });
-
-
-
+$("#undo").click(function(){
+  undoName();
+});
 
 
 

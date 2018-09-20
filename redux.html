@@ -9,22 +9,34 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
 </head>
 <body>
-  <div class="SearchInputWrapperOwerlay">
-    <div class="SearchInputWrapper">
-      <form>
-        <input type="text" name="search" id="searchInput">
-      </form>
-      <div class="ResultWrapper">
-        
-      </div>
-      <div id="output">
-      
-      </div>
-    </div>
-  </div>
-  
-  <div id="spnResult"></div>
 
+  <div class="container">
+      <br><br>
+      <div class="card">
+          <div class="card-header">
+            Add Name
+          </div>
+          <div class="card-body">
+              <div class="form-group">
+                  <input type="text" class="form-control" id="name"  placeholder="Enter Name">
+                </div>
+                <button id="add" class="btn btn-primary">Submit</button>
+          </div>
+          <div class="card-footer">
+              <button class="btn btn-default" id="undo" disabled>Undo</button>
+              <button class="btn btn-default" id="redo" disabled>Redo</button>
+          </div>
+        </div>
+        <br><br>
+        <div class="card">
+            <div class="card-header">
+             History 
+            </div>
+            <div class="card-body" style="max-height: 500px;overflow: auto;">
+                <pre><code id="codeJson"></code>No History Found!!</pre>
+            </div>
+        </div>
+  </div>
 
 	<!-- <p>Press Ctrl+Space to see the search bar</p>	 -->
 	<script type="text/javascript" src="script/jquery.min.js"></script>
