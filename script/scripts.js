@@ -27,7 +27,35 @@ Mousetrap.bind('ctrl+shift+k', function (e) {
 // Shortcut Definition to hide searchbar
 Mousetrap.bind('esc', function (e) {
   $(".SearchInputWrapperOwerlay").hide();
-})
+});
+
+var element = document.getElementById("SearchInputWrapper");
+Mousetrap(element).bind(['up','down'], function(event) { 
+   event.stopPropagation();
+   if(event.key == "ArrowUp") {
+    var selected = $(".selected");
+    $("#output .typeahead__list li").removeClass("selected");
+    if (selected.prev().length == 0) {
+      selected.siblings().last().addClass("selected");
+    } else {
+      selected.prev().addClass("selected");
+    }
+   }
+
+   if(event.key == "ArrowDown") {
+    var selected = $(".selected");
+    $("#output .typeahead__list li").removeClass("selected");
+    if (selected.next().length == 0) {
+      selected.siblings().first().addClass("selected");
+    } else {
+      selected.next().addClass("selected");
+    }
+   }
+});
+
+Mousetrap(element).bind(['left','right'], function(event) { 
+  $("#searchInput").focus();
+});
 
 $(document).ready(function ($) {
 
@@ -41,7 +69,14 @@ $(document).ready(function ($) {
   });
 
   $("#searchInput").keyup(function (event) {
+
     const key = event.key;
+
+    if(event.keyCode >= 37 && event.keyCode <= 40) {
+      event.stopImmediatePropagation();
+      return;
+  }
+
     var searchText = $(event.currentTarget).val();
     var result = fuse.search(searchText);
     // console.log(event);
@@ -63,31 +98,6 @@ $(document).ready(function ($) {
     }
   });
 });
-
-$("#output").keyup(function (event) {
-  if (event.keyCode == 38) { // up
-    var selected = $(".selected");
-    $("#output .typeahead__list li").removeClass("selected");
-    if (selected.prev().length == 0) {
-      selected.siblings().last().addClass("selected");
-    } else {
-      selected.prev().addClass("selected");
-    }
-  }
-
-  if (event.keyCode == 40) { // down
-    var selected = $(".selected");
-    $("#output .typeahead__list li").removeClass("selected");
-    if (selected.next().length == 0) {
-      selected.siblings().first().addClass("selected");
-    } else {
-      selected.next().addClass("selected");
-    }
-  }
-
-});
-
-
 
 $(document).on("mouseover", "#output .typeahead__list li", function () {
   $("#output .typeahead__list li").removeClass("selected");
