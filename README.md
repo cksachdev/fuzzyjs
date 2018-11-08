@@ -34,6 +34,8 @@ https://github.com/ccampbell/mousetrap
 ls | head -100 > ../elements.json
 ```
 3. Use multi cursor feature in sublime to form the test json
+4. Choices.js https://joshuajohnson.co.uk/Choices/
+   Note: Scroll to the end of this page to experience the last dom element.
 
 
 ### Libraries:
