@@ -15,14 +15,14 @@ MongoClient.connect(FUZZYSEARCH_CONFIG.SERVER, {
 
   var dbo = db.db(FUZZYSEARCH_CONFIG.DB);
   var queryparam = FUZZYSEARCH_CONFIG.QUERY_FIELD;
+  var projection = {};
+  projection[queryparam] = 1;
+  projection['_id'] = 0;
   dbo.collection(FUZZYSEARCH_CONFIG.COLLECTION).find({}, {
-   projection: {
-    'Learning outcome': 1,
-    _id: 0
-   }
+   projection: projection
   }).toArray(function(err, result) {
    if (err) throw err;
-   console.log(result);
+
    var result_array = [];
    (async () => {
 
